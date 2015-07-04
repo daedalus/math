@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+#
+# Author Dario Clavijo 2015
+# GPLv3
+
 # implementation acording to whikipedia: https://es.wikipedia.org/wiki/C%C3%A1lculo_de_la_ra%C3%ADz_cuadrada
 
 def sqrt(x):
