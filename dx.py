@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+#
+# Author Dario Clavijo 2015
+# GPLv3
+
 # derivative of f(x)
 
 def __df(f,x,h): 
