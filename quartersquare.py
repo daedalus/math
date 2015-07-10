@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+#
+# Author Dario Clavijo 2015
+# GPLv3
+
 import math
 
 def qsqr(a,b):
