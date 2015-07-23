@@ -41,5 +41,6 @@ print a*b
 print pmultcos(a,b)
 print pmultsin(a,b)
 print pmultsincos(a,b)
+print pmultcossin(a,b)
 
 
