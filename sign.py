@@ -3,6 +3,9 @@
 # Author Dario Clavijo 2015
 # GPLv3
 
-# sign of x returns: [-1,1] for x!=0
+# sign of x returns: [-1,1]
 def sign(x):
-    return x/abs(x)
+    if x == 0:
+        return 0
+    else:
+        return x/abs(x)
