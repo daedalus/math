@@ -3,6 +3,7 @@
 # Author Dario Clavijo 2015
 # GPLv3
 
+# absolute value of x
 def _abs(x):
         if x >= 0:
                 return x
