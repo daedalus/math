@@ -7,7 +7,7 @@ import math
 
 # the x magic number is between 6444429920 and 6444429921
 def e():
-        x = 6444429920 # or 0x1801e3260
+        x = 6444429920 + 0.22 # or int(0x1801e3260,16) + 0.22
         ret = (1+(1.0/x))**x
         return ret
 
