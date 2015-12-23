@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+#
+# Author Dario Clavijo 2015
+
 from math import *
 
 RAD = 0.0174533
