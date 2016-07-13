@@ -1,5 +1,5 @@
 #
-# Author Darío Clavijo 2016
+# Author Dario Clavijo 2016
 # GPLv3
 
 import math
@@ -46,6 +46,14 @@ def normalize(vec):
   	
   	return vec
 
+
+def magnitude(vec):
+	res = 0
+  	for n in range (0,len(vec)):
+    		res += vec[n] * vec[n]
+ 
+	return math.sqrt(res)
+
 def tests():
 	vec = [0,4,-3]
 	print length(vec)
@@ -65,3 +73,7 @@ def tests():
 
 	print dot(k,j)
 	print cross(k,j)
+
+	print magnitude(j)
+	print magnitude(k) 
+	
