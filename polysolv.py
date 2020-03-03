@@ -7,7 +7,7 @@ import gmpy2
 from gmpy2 import mpz
 
 def sanitize(s):
-  return s.replace(" 0x^1 "," ").replace("+ -","- ").replace("1x","x").replace(" + - "," - ")
+  return s.replace(" 0x^1 "," ").replace("+ -","- ").replace("1x","x").replace(" + - "," - ").replace("^1","")
 
 def factors(n):
   result = []
@@ -96,10 +96,7 @@ def factor_poly(Poly,Grade):
     result = poly_synthetic_div_complete_step(P,grade)
     if result != None:
       P,term = result
-      if term == []:
-        break
-      else:
-        terms += term
+      terms += term
     else:
         break
   terms += ["(%s)" % poly_to_text(P,grade)]
