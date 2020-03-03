@@ -83,6 +83,7 @@ def poly_synthetic_div_complete_step(poly,grade):
         term = ["(x + %d)" % -Q]
         #break 
         return R[:-1],term
+    print "No divisor found"
     return None 
   else:
     print "No rationals"  
