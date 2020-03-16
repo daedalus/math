@@ -10,7 +10,7 @@ def sqrt(x):
 	t = 0
 	while (t != r):
 		t = r
-		r = 0.5 (x/r +r)
+		r = 0.5 * (x/r +r)
 	return r
 
 # given the x**2-2=0 condition we bruteforce an aproximation to sqrt(2)
