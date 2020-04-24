@@ -40,8 +40,6 @@ def legendre_prop0(p,q):
    print ("legendre_prop0(%d|%d)" % (p,q))
    phi = (p-1)*(q-1)
    _pow = pow(int(-1),int(phi//4))
-   _pow2 = (-1) **(phi//4)
-   print (phi//4,_pow,_pow2)
    return _pow * legendre_naive(q,p) 
   
 def legendre_prop1(p,q):
@@ -49,7 +47,7 @@ def legendre_prop1(p,q):
   if p == 2:
     return pow((-1),(((q**2)-1)//8))
   else:
-    raise Exception ("p mod 2 != 0")
+    raise Exception ("p != 2")
 
 def legendre_prop2(ab,q):
    print ("legendre_prop2(%d,%d)"  % (ab,q))
