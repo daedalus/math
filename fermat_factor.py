@@ -7,14 +7,17 @@ import gmpy2
 
 def fermat(n):
   a = gmpy2.isqrt(n)
-  b2 = (a**2) -n
+  if a**2 == n:
+    return a,a
+  b2 = (a**2) - n
   step=0
   while not gmpy2.is_square(b2):
     a += 1
-    b2 = (a**2) -n
-    step+=1
-    print(n,step,a,b2)
-  return a-gmpy2.isqrt(b2),a + gmpy2.isqrt(b2)
+    b2 = (a**2) - n
+    #step += 1
+    #print(n,step,a,b2)
+    ib2 = gmpy2.isqrt(b2)
+  return a - ib2, a + ib2
 
 def test():
   n=5959
