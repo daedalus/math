@@ -7,7 +7,7 @@ def pisano_period(m):
     return 1
   a = b = 1
   n = 0
-  while True:
+  while i <= (m**2):
     b,a = a,(a+b) % m
     if a == 1 and b ==0:
       return n + 2
