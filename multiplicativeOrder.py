@@ -2,7 +2,7 @@
 # Author Dario Clavijo 2021
 from gmpy2 import gcd
 
-def multiplicative_order(a,n):
+def multiplicativeOrder(a,n):
    if gcd(a,n) > 1:
      return -1
    k = 2
@@ -22,9 +22,9 @@ def ZnMultGroup(n):
   return tmp
 
 if __name__ == "__main__":
-  print(ZnMultGroup(10))
-  print(ZnMultGroup(11))
+  print("ZnMultGroup(10)",ZnMultGroup(10))
+  print("ZnMultGroup(11)",ZnMultGroup(11))
   for i in range(2,10):
     for j in range(i,10):
       if gcd(i,j) == 1:
-        print(i,j,multiplicative_order(i,j))
+        print("multiplicativeOrder",i,j,multiplicativeOrder(i,j))
