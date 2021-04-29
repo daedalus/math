@@ -3,6 +3,7 @@
 from gmpy2 import gcd
 
 def multiplicativeOrder(a,n):
+   """ multiplicative order of generator a modulo n or ORDn(a) or On(a)""" 
    if gcd(a,n) > 1:
      return -1
    k = 2
@@ -13,6 +14,7 @@ def multiplicativeOrder(a,n):
    return -1
 
 def ZnMultGroup(n):
+  """Multiplicative group of modulo Zn modulo n or Z/nZ or Zn*"""
   i=1
   tmp = []
   while i<n:
