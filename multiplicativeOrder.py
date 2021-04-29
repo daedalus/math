@@ -13,6 +13,11 @@ def multiplicativeOrder(a,n):
      k += 1
    return -1
 
+def _multiplicativeOrder_akn(a,k,n):
+  """ ORDn(a^k) = ORDn(a) // (gcd(k,ORDn(a)) """
+  ORDna = multiplicativeOrder(a,n)
+  return ORDna // (gcd(k,ORDna))
+
 def ZnMultGroup(n):
   """Multiplicative group of modulo Zn modulo n or Z/nZ or Zn*"""
   i=1
