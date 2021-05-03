@@ -68,6 +68,7 @@ def zvalue_anomaly_detection(X,treshold = [-1,1]):
        
 
 def MAD_anomaly_detection(X,treshold = 1.5):
+    """ Median absoute value anomaly detection """
     M = MAD(X)
     m = mean(X)
     for i in range(0,len(X)):
@@ -76,6 +77,17 @@ def MAD_anomaly_detection(X,treshold = 1.5):
             yield (X[i],v)
 
 def test():
+    """
+    Expected output:
+    Series: [2, 3, 5, 2, 3, 12, 5, 3, 4]
+    Mean: 4.333333333333333
+    StdDev: 2.9059326290271157
+    Bounds: (1.4274007043062173, 7.239265962360449)
+    simple anomaly detection: [12]
+    zvalues: [-0.8029550685469661, -0.45883146774112343, 0.22941573387056186, -0.8029550685469661, -0.45883146774112343, 2.6382809395114606, 0.22941573387056186, -0.45883146774112343, -0.11470786693528078]
+    zvalue anomaly detection: [(12, 2.6382809395114606)]
+    MAD anomaly detection: [(12, 3.8333333333333344)]
+    """
     S = [2,3,5,2,3,12,5,3,4]
     print("Series:",S)
     print("Mean:",mean(S))
@@ -85,7 +97,6 @@ def test():
     print("zvalues:",list(zvalue(S)))
     print("zvalue anomaly detection:",list(zvalue_anomaly_detection(S)))
     print("MAD anomaly detection:",list(MAD_anomaly_detection(S)))
-
     
 
 if __name__ == "__main__":
