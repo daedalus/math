@@ -48,7 +48,7 @@ def simple_anonaly_detection(X):
     B = bounds(X)
     for i in range(0,len(X)):
          if X[i] < B[0] or X[i] > B[1]:
-             yield X[i]
+             yield i,X[i]
 
 
 def zvalue(X):
@@ -64,7 +64,7 @@ def zvalue_anomaly_detection(X,treshold = [-1,1]):
     Z = list(zvalue(X))
     for i in range(0,len(X)):
         if Z[i] < treshold[0] or Z[i] > treshold[1]:
-            yield (X[i],Z[i])
+            yield (i,X[i],Z[i])
        
 
 def MAD_anomaly_detection(X,treshold = 1.5):
@@ -74,7 +74,8 @@ def MAD_anomaly_detection(X,treshold = 1.5):
     for i in range(0,len(X)):
         v = abs(X[i] - m) / M 
         if v > treshold:
-            yield (X[i],v)
+            yield (i,X[i],v)
+
 
 def test():
     """
