@@ -5,42 +5,44 @@
 
 import math
 
-def pmultcos(a,b):
 
-	a = math.acos(a)
-	b = math.acos(b)
-	
-	return (math.cos(a+b) + math.cos(a-b))/2
+def pmultcos(a, b):
+
+    a = math.acos(a)
+    b = math.acos(b)
+
+    return (math.cos(a + b) + math.cos(a - b)) / 2
 
 
-def pmultsin(a,b):	
+def pmultsin(a, b):
 
-	a = math.asin(a)
-	b = math.asin(b)
-	
-	return (math.cos(a-b) - math.cos(a+b))/2
+    a = math.asin(a)
+    b = math.asin(b)
 
-def pmultsincos(a,b):
-	
-	a = math.asin(a)
-	b = math.acos(b)
+    return (math.cos(a - b) - math.cos(a + b)) / 2
 
-	return (math.sin(a+b) + math.sin(a-b))/2
 
-def pmultcossin(a,b):
+def pmultsincos(a, b):
 
-	a = math.acos(a)	
-	b = math.asin(b)
+    a = math.asin(a)
+    b = math.acos(b)
 
-	return (math.sin(a+b) - math.sin(a-b))/2
+    return (math.sin(a + b) + math.sin(a - b)) / 2
+
+
+def pmultcossin(a, b):
+
+    a = math.acos(a)
+    b = math.asin(b)
+
+    return (math.sin(a + b) - math.sin(a - b)) / 2
+
 
 a = 0.17
 b = 0.37
 
-print a*b
-print pmultcos(a,b)
-print pmultsin(a,b)
-print pmultsincos(a,b)
-print pmultcossin(a,b)
-
-
+print a * b
+print pmultcos(a, b)
+print pmultsin(a, b)
+print pmultsincos(a, b)
+print pmultcossin(a, b)
