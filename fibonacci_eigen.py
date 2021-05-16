@@ -50,16 +50,20 @@ def find_fibonacci_eigenvalues():
   print("λ0:",la0,"\nλ1:",la1)
   return (la0,la1)
 
-def fib_eig(la0,la1,k):
-  ik = pow(la0,k) - pow(la1,k) / (la0 -la1)
+def binet_fib_eig(la0,la1,k):
+  ik = pow(la0,k) - pow(la1,k) / (la0 -la1) # Binet's formula: (a^n-b^n)/(a-b)
   return round(ik)
 
 def test():
   la0,la1 = find_fibonacci_eigenvalues()
   for i in range(3,30):
     a = fib(i)
-    b = fib_eig(la0,la1,i)
+    b = binet_fib_eig(la0,la1,i)
     print(i,a,b,a==b)
 
-if __name__ == "__main__":
-  test()
+
+def test2():
+  return
+
+#if __name__ == "__main__":
+#  test()
