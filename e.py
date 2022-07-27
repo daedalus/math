@@ -38,7 +38,25 @@ def lim_ddx_e(x):
     ) / h  # = math.e * ((math.e ** h - 1.0)/h)
 
 
-print math.e
-print direct_e()
-print taylor_e()
-print lim_ddx_e(1)
+def test():
+  print(math.e)
+  print(direct_e())
+  print(taylor_e())
+  print(lim_ddx_e(1))
+
+
+i = complex(0,1)
+pi = math.pi
+
+def exp(n, precision=100):
+  return sum([(n ** x) / math.factorial(x) for x in range(0, precision)])
+
+def test_exp():
+  print(exp(0))
+  print(exp(0.5))
+  print(exp(1))
+  print(exp(pi))
+  print(exp(i*pi))
+
+
+test_exp()
