@@ -1,6 +1,7 @@
 from gmpy2 import invert
+from timing import timing
 
-
+@timing
 def compute_modinv_1_n(n, p):
   """
   https://codeforces.com/blog/entry/83075
@@ -10,7 +11,7 @@ def compute_modinv_1_n(n, p):
     inv.append((p - p // i) * inv[p % i] % p)
   return inv
 
-
+@timing
 def compute_modinv_gmpy_1_n(n, p):
   inv = [0]
   for i in range(1, n):
@@ -18,10 +19,10 @@ def compute_modinv_gmpy_1_n(n, p):
   return inv
 
 
-n, p = 10, 10**9+7
+n, p = 10**4, 10**9+7
 #n, p = 10, 65537
 
-print(compute_modinv_1_n(n, p))
-print(compute_modinv_gmpy_1_n(n, p))
+a = compute_modinv_1_n(n, p)
+b = compute_modinv_gmpy_1_n(n, p)
 
 
