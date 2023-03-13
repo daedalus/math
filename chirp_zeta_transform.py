@@ -1,7 +1,17 @@
 # Given the following paper: https://www.nature.com/articles/s41598-019-50234-9
 
-#FIXME
-# find this function implementation: ToeplitzMultiplyE 
+#TODO: Implimentand test functions
+# Found function implementation: ToeplitzMultiplyE
+# Suplimental paper (at bottom of previous link):
+# https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-019-50234-9/MediaObjects/41598_2019_50234_MOESM1_ESM.pdf
+#
+# Contains functions:
+#   ToeplitzMultiplyE
+#   ToeplitzMultiplyP
+#   CirculantMultiply
+#   SkewCirculantMultiply
+#
+# Depends on FFT and IFFT (import fftw)
 
 def CZT(x,M,W,A):
     N=len(x)
