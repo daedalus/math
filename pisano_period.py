@@ -4,10 +4,12 @@ import sys
 
 
 def pisano_period(m):
-    if m == 1:
-        return 1
+    """
+    A001175
+    """
+    if m == 1: return 1
     a = b = 1
-    n = 0
+    n = i = 0
     while i <= (m ** 2):
         b, a = a, (a + b) % m
         if a == 1 and b == 0:
