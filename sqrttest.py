@@ -15,6 +15,15 @@ def sqrt(x):
     return r
 
 
+def sqrt(n):
+  x = n
+  y = 1
+  e = 0.00000001
+  while (x - y) > e:
+    x = (x + y) / 2
+    y = n / x
+  return x
+  
 # given the x**2-2=0 condition we bruteforce an aproximation to sqrt(2)
 
 
