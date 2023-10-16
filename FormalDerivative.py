@@ -6,7 +6,7 @@ def polyrep(Fx):
   s = ["%dx ^ %d" % x for x in Fx]
   return " + ".join(s)
 
-fx = [(1,6),(1,0)]
+fx = [(-1,6),(1,0)]
 print(polyrep(fx))
 fx = FormalDerivative(fx)
 print(polyrep(fx))
