@@ -11,17 +11,11 @@ def sgn(x):
 
 
 def max(a, b):
-    if b > a:
-        return b
-    else:
-        return a
+    return max(b, a)
 
 
 def min(a, b):
-    if b < a:
-        return b
-    else:
-        return a
+    return min(b, a)
 
 
 def close(a, b, e):

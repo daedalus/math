@@ -9,7 +9,7 @@ def SeqMult(s):
         if l % 2 != 0:
             s += [1]
             l += 1
-        s = list(map(mul, s[0 : l // 2], s[l // 2 :]))
+        s = list(map(mul, s[:l // 2], s[l // 2 :]))
         l = len(s)
     return s[0]
 

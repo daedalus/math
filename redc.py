@@ -74,7 +74,7 @@ def test():
     from functools import reduce
     p = 2
     TMP=[]
-    for i in range(1,210):
+    for _ in range(1,210):
         p = int(gmpy2.next_prime(p))
         TMP.append(MontgomeryReducer(p,gmpy=gmpy2))
     C = reduce(mul,TMP)

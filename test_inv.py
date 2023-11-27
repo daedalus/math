@@ -7,15 +7,13 @@ def compute_modinv_1_n(n, p):
   https://codeforces.com/blog/entry/83075
   """
   inv = [0, 1]
-  for i in range(2, n):
-    inv.append((p - p // i) * inv[p % i] % p)
+  inv.extend((p - p // i) * inv[p % i] % p for i in range(2, n))
   return inv
 
 @timing
 def compute_modinv_gmpy_1_n(n, p):
   inv = [0]
-  for i in range(1, n):
-    inv.append(int(invert(i, p)))
+  inv.extend(int(invert(i, p)) for i in range(1, n))
   return inv
 
 

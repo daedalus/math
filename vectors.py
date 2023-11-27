@@ -54,10 +54,7 @@ def normalize(vec):
 
 
 def magnitude(vec):
-    res = 0
-    for n in range(0, len(vec)):
-        res += vec[n] * vec[n]
-
+    res = sum(vec[n] * vec[n] for n in range(0, len(vec)))
     return math.sqrt(res)
 
 

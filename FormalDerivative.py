@@ -1,5 +1,5 @@
 def FormalDerivative(Fx):
-  return [(x[0] * x[1], x[1] - 1) for x in Fx if (x[1]-1) > -1]
+  return [(x[0] * x[1], x[1] - 1) for x in Fx if x[1] > 0]
 
 
 def polyrep(Fx):

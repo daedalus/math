@@ -7,11 +7,7 @@ from math import *
 
 # tells if a n is prime or not
 def isPrime(n):
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-
-    return True
+    return all(n % i != 0 for i in range(2, int(n ** 0.5) + 1))
 
 
 # finds the prime factors of n
@@ -29,16 +25,14 @@ def factors(n):
             if isPrime(num):
                 factor.append(num)
                 break
-    factor = sorted(factor)
-    return factor
+    return sorted(factor)
 
 
 # add the negative factors to try
 def addnegatives(D):
     nD = []
     for i in D:
-        nD.append(-abs(i))
-        nD.append(abs(i))
+        nD.extend((-abs(i), abs(i)))
     return nD
 
 
@@ -52,7 +46,7 @@ def ruffini_step(P, D):
                 tmpPoli.append(P[j])
             else:
                 tmpPoli.append(P[j] + (D[i] * tmpPoli[j - 1]))
-        if tmpPoli[len(tmpPoli) - 1] == 0:
+        if tmpPoli[-1] == 0:
             return [D[i], tmpPoli]
 
 

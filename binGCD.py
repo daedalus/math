@@ -12,15 +12,9 @@ def gcd(a, b):
     if b == 0:
         return a
     if a & 1 == 1:
-        if b & 1 == 0:
-            return gcd(a, b >> 1)
-        else:
-            return gcd(abs(a - b), min(a, b))
+        return gcd(a, b >> 1) if b & 1 == 0 else gcd(abs(a - b), min(a, b))
     else:
-        if b & 1 == 1:
-            return gcd(a >> 1, b)
-        else:
-            return 2 * gcd(a >> 1, b >> 1)
+        return gcd(a >> 1, b) if b & 1 == 1 else 2 * gcd(a >> 1, b >> 1)
 
 
 def test():
