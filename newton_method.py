@@ -15,13 +15,13 @@ def newtons_method(
     epsilon,          # Do not divide by a number smaller than this
     max_iterations,   # The maximum number of iterations to execute
     ):
-    for i in range(max_iterations):
-        y = f(x0)
-        yprime = f_prime(x0)
-        if abs(yprime) < epsilon:       # Stop if the denominator is too small
-            break
-        x1 = x0 - y / yprime            # Do Newton's computation
-        if abs(x1 - x0) <= tolerance:   # Stop when the result is within the desired tolerance
-            return x1                   # x1 is a solution within tolerance and maximum number of iterations
-        x0 = x1                         # Update x0 to start the process again
-    return None
+	for _ in range(max_iterations):
+		y = f(x0)
+		yprime = f_prime(x0)
+		if abs(yprime) < epsilon:       # Stop if the denominator is too small
+		    break
+		x1 = x0 - y / yprime            # Do Newton's computation
+		if abs(x1 - x0) <= tolerance:   # Stop when the result is within the desired tolerance
+		    return x1                   # x1 is a solution within tolerance and maximum number of iterations
+		x0 = x1                         # Update x0 to start the process again
+	return None

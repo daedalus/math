@@ -5,18 +5,12 @@
 
 # absolute value of x
 def _abs(x):
-    if x >= 0:
-        return x
-    else:
-        return -x
+    return x if x >= 0 else -x
 
 
 # sign of x returns: [-1,1]
 def sign(x):
-    if x == 0:
-        return 0
-    else:
-        return x / _abs(x)
+    return 0 if x == 0 else x / _abs(x)
 
 
 def almostEqual(a, b, epsilon):

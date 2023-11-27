@@ -32,10 +32,7 @@ def poly_synthetic_div(P, Q):
     R = [0] * lP
 
     for i in range(0, lP):
-        if i == 0:
-            R[i] = P[i]
-        else:
-            R[i] = P[i] + Q * R[i - 1]
+        R[i] = P[i] if i == 0 else P[i] + Q * R[i - 1]
     return R
 
 
@@ -57,8 +54,7 @@ def get_rationals(poly, grade):
                 tmp.append(div)
     tmp2 = []
     for r in set(sorted(tmp)):
-        tmp2.append(r)
-        tmp2.append(-r)
+        tmp2.extend((r, -r))
     return tmp2
 
 

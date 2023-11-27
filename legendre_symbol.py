@@ -17,7 +17,7 @@ def factor(n0):
             while n % i == 0:
                 n = n // i
                 factors.append(i)
-    if len(factors) == 0:
+    if not factors:
         factors = [n]
     print("factor(%d)=%s" % (n0, str(factors)))
     return factors
@@ -42,7 +42,7 @@ def legendre_naive(p, q):
 def legendre_prop0(p, q):
     print("legendre_prop0(%d|%d)" % (p, q))
     phi = (p - 1) * (q - 1)
-    _pow = pow(int(-1), int(phi // 4))
+    _pow = pow(-1, int(phi // 4))
     return _pow * legendre_naive(q, p)
 
 
@@ -79,18 +79,17 @@ def _legendre(p, q):
             ret = legendre_naive(q, p)
         if p1 == 2:
             ret = legendre_prop1(p1, q)
-        else:
-            if p1 > 2:
-                fp1 = factor(p1)[::-1]
-                tmp = 1
-                for f in fp1:
-                    # while tmp2 > 1:
-                    if f == 2:
-                        tmp *= legendre_prop1(f, q)
-                    else:
-                        tmp *= _legendre(q, f)
-                # tmp = legendre_prop2(p1,q)
-                ret = tmp
+        elif p1 > 2:
+            fp1 = factor(p1)[::-1]
+            tmp = 1
+            for f in fp1:
+                # while tmp2 > 1:
+                if f == 2:
+                    tmp *= legendre_prop1(f, q)
+                else:
+                    tmp *= _legendre(q, f)
+            # tmp = legendre_prop2(p1,q)
+            ret = tmp
     print("<legendre(%d|%d) r=%d -> %d" % (p, q, r, ret))
     return ret
 

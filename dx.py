@@ -7,8 +7,7 @@
 
 
 def __df(f, x, h):
-    r = (f(x + h / 2) - f(x - h / 2)) / h
-    return r
+    return (f(x + h / 2) - f(x - h / 2)) / h
 
 
 def derivative(f):

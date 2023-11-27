@@ -2,13 +2,7 @@ import math
 
 
 def sieve_Erathostenes(n):
-    sieves = []
-    primes = []
-
-    # initialize
-    for l in range(0, n):
-        sieves.append(True)
-
+    sieves = [True for _ in range(0, n)]
     # sieving
     for i in range(2, int(math.sqrt(n))):
         if sieves[i] == True:
@@ -16,11 +10,7 @@ def sieve_Erathostenes(n):
                 h = (i ** 2) + (j * i)
                 if h < n:
                     sieves[h] = False
-    # filtering
-    for k in range(2, n):
-        if sieves[k] == True:
-            primes.append(k)
-    return primes
+    return [k for k in range(2, n) if sieves[k] == True]
 
 
 print sieve_Erathostenes(121)

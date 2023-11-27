@@ -27,10 +27,7 @@ def dft_slow(signal):
 
 def nyquist_norm(histogram):
     N = len(histogram)
-    tmp = []
-    for n in range(0, N / 2):
-        tmp.append(histogram[n] * 2)
-    return tmp
+    return [histogram[n] * 2 for n in range(0, N / 2)]
 
 
 print nyquist_norm(dft_slow(signal))

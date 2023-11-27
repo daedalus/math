@@ -11,18 +11,14 @@ import math
 
 def direct_e():
     x = 6444429920 + 0.22  # or int(0x1801e3260,16) + 0.22
-    ret = (1 + (1.0 / x)) ** x
-    return ret
+    return (1 + (1.0 / x)) ** x
 
 
 # taylor aproximation of e
 
 
 def taylor_e():
-    accum = 0
-    for n in xrange(0, 15):
-        accum += 1.0 / (math.factorial(n))
-    return accum
+    return sum(1.0 / (math.factorial(n)) for n in xrange(0, 15))
 
 
 # by limits definition:
@@ -49,7 +45,7 @@ i = complex(0,1)
 pi = math.pi
 
 def exp(n, precision=100):
-  return sum([(n ** x) / math.factorial(x) for x in range(0, precision)])
+    return sum((n ** x) / math.factorial(x) for x in range(0, precision))
 
 def test_exp():
   print(exp(0))

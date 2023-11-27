@@ -5,9 +5,7 @@
 # AM => GM => HM
 # arithmetric mean
 def AM(data):
-    accum = 0
-    for i in range(0, len(data) - 1):
-        accum += data[i]
+    accum = sum(data[i] for i in range(0, len(data) - 1))
     return accum / len(data)
 
 
@@ -21,7 +19,5 @@ def GM(data):
 
 # harmonic mean
 def HM(data):
-    accum = 0
-    for i in range(0, len(data) - 1):
-        accum += 1 / data[i]
+    accum = sum(1 / data[i] for i in range(0, len(data) - 1))
     return len(data) * (accum ** -1)
