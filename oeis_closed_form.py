@@ -5,7 +5,7 @@ import requests
 import sqlite3
 
 def getSequence(id):
-  f = requests.get("https://oeis.org/search?fmt=json&q=id:%s" % id)
+  f = requests.get(f"https://oeis.org/search?fmt=json&q=id:{id}")
   doc = json.loads(f.content)
   return [int(x) for x in doc['results'][0]['data'].split(",")]
 
