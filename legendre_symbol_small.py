@@ -7,10 +7,7 @@ def legendre_symbol(a, p):
 
     ls = pow(a, (p - 1) // 2, p)
 
-    if ls == p - 1:
-        return -1
-    else:
-        return ls
+    return -1 if ls == p - 1 else ls
 
 
 def test():
