@@ -11,14 +11,14 @@ def euler(n):
     sol = []
 
     while a < end and len(sol) < 2:
-        b2 = n - a ** 2
+        b2 = n - a**2
         b = gmpy2.isqrt(b2)
-        b3 = b2 - b ** 2
+        b3 = b2 - b**2
         # print(b2,b,b3)
         if b3 == 0 and a != firstb and b != firstb:
             firstb = b
             sol.append([b, a])
-            print(b, a)
+            print((b, a))
         a += 1
 
     if len(sol) < 2:
@@ -38,11 +38,11 @@ def euler(n):
 
     # n = (k**2 + h**2)*(m**2 + l**2)
 
-    return (k ** 2 + h ** 2) // 4, (l ** 2 + m ** 2) // 4
+    return (k**2 + h**2) // 4, (l**2 + m**2) // 4
 
 
 import sys
 
 r = euler(int(sys.argv[1]))
 print(r)
-print(r[0] * r[1])
+print((r[0] * r[1]))

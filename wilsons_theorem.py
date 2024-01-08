@@ -6,4 +6,4 @@ def wilson_is_prime(n):
 
 
 for i in range(1, 100):
-    print(i, wilson_is_prime(i), is_prime(i))
+    print((i, wilson_is_prime(i), is_prime(i)))

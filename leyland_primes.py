@@ -11,7 +11,7 @@ def leyland_primes_naive(m):
     tmp = []
     for i in range(2, m):
         for j in range(2, m):
-            x = i ** j + j ** i
+            x = i**j + j**i
             if gmpy2.is_prime(x):
                 if x not in tmp:
                     tmp.append(x)
@@ -24,11 +24,11 @@ def leyland_primes_oeis(N):
     n = 1
     n1 = 1
     while n < N:
-        n = 2 * n1 ** n1
+        n = 2 * n1**n1
         k = n1 + 1
         while k < N:
             if gmpy2.gcd(n, k) == 1:
-                a = n ** k + k ** n
+                a = n**k + k**n
                 if a > N:
                     break
                 if gmpy2.is_prime(a):
@@ -41,4 +41,4 @@ def leyland_primes_oeis(N):
 
 
 if __name__ == "__main__":
-    print(leyland_primes_oeis(10 ** 10))
+    print((leyland_primes_oeis(10**10)))

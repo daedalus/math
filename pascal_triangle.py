@@ -10,4 +10,4 @@ def hexify(i):
 
 
 for i in range(0, 257):
-    print bin(nk(256, i))
+    print((bin(nk(256, i))))

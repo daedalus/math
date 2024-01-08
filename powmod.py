@@ -16,8 +16,8 @@ def test(A):
     print(A)
     a = powmod(A[0], A[1], A[2])
     b = pow(A[0], A[1], A[2])
-    print(a, b)
+    print((a, b))
     return a == b
 
 
-print(test((13, 484, 497)))
+print((test((13, 484, 497))))

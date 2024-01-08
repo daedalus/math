@@ -14,13 +14,13 @@ def approximation(sides):
     pi_guess = (inside + outside) / 2
     accuracy = (1 - (pi_guess - pi) / pi) * 100
 
-    print "sides:", sides
-    print "angle:", angle
-    print "inside:", inside
-    print "outside:", outside,
-    print "pi_guess:", pi_guess
-    print "accuracy:", accuracy
+    print("sides:", sides)
+    print("angle:", angle)
+    print("inside:", inside)
+    print("outside:", outside, end=" ")
+    print("pi_guess:", pi_guess)
+    print("accuracy:", accuracy)
 
 
-for i in xrange(10):
-    approximation(10 ** i)
+for i in range(10):
+    approximation(10**i)

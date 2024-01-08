@@ -23,7 +23,7 @@ def test():
         a = subMod(i, x)
         r, m = divMod(i, x)
         b = x % i
-        print(x, i, a, b, a == b, r, m, x == (r * i) + m)
+        print((x, i, a, b, a == b, r, m, x == (r * i) + m))
 
 
 if __name__ == "__main__":

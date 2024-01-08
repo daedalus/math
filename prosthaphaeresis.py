@@ -41,8 +41,8 @@ def pmultcossin(a, b):
 a = 0.17
 b = 0.37
 
-print a * b
-print pmultcos(a, b)
-print pmultsin(a, b)
-print pmultsincos(a, b)
-print pmultcossin(a, b)
+print((a * b))
+print((pmultcos(a, b)))
+print((pmultsin(a, b)))
+print((pmultsincos(a, b)))
+print((pmultcossin(a, b)))

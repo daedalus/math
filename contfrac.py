@@ -17,5 +17,5 @@ def cont_frac(a, b):
     return coef
 
 
-print(cont_frac(649, 200))
-print(cont_frac(17993, 90581))
+print((cont_frac(649, 200)))
+print((cont_frac(17993, 90581)))

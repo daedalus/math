@@ -19,7 +19,7 @@ def factor(n0):
                 factors.append(i)
     if not factors:
         factors = [n]
-    print("factor(%d)=%s" % (n0, str(factors)))
+    print(("factor(%d)=%s" % (n0, str(factors))))
     return factors
 
 
@@ -29,33 +29,33 @@ def legendre_naive(p, q):
     else:
         r = -1
         for x in range(0, q):
-            y = (x ** 2) % q
+            y = (x**2) % q
             z = p % q
             # print x,y,z
             if y == z:
                 r = 1
                 break
-    print("legendre_naive(%d|%d)=%d" % (p, q, r))
+    print(("legendre_naive(%d|%d)=%d" % (p, q, r)))
     return r
 
 
 def legendre_prop0(p, q):
-    print("legendre_prop0(%d|%d)" % (p, q))
+    print(("legendre_prop0(%d|%d)" % (p, q)))
     phi = (p - 1) * (q - 1)
     _pow = pow(-1, int(phi // 4))
     return _pow * legendre_naive(q, p)
 
 
 def legendre_prop1(p, q):
-    print("legendre_prop1 (2| %d)" % q)
+    print(("legendre_prop1 (2| %d)" % q))
     if p == 2:
-        return pow((-1), (((q ** 2) - 1) // 8))
+        return pow((-1), (((q**2) - 1) // 8))
     else:
         raise Exception("p != 2")
 
 
 def legendre_prop2(ab, q):
-    print("legendre_prop2(%d,%d)" % (ab, q))
+    print(("legendre_prop2(%d,%d)" % (ab, q)))
     tmp = 1
     for f in factor(ab):
         if f == 2:
@@ -67,7 +67,7 @@ def legendre_prop2(ab, q):
 
 def _legendre(p, q):
     r = p % q
-    print(">legendre(%d|%d) r=%d" % (p, q, r))
+    print((">legendre(%d|%d) r=%d" % (p, q, r)))
     if r == 0:
         ret = 0
     else:
@@ -90,7 +90,7 @@ def _legendre(p, q):
                     tmp *= _legendre(q, f)
             # tmp = legendre_prop2(p1,q)
             ret = tmp
-    print("<legendre(%d|%d) r=%d -> %d" % (p, q, r, ret))
+    print(("<legendre(%d|%d) r=%d -> %d" % (p, q, r, ret)))
     return ret
 
 

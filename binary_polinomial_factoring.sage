@@ -64,7 +64,7 @@ def test():
                 ff += 1
             else:
                 nf += 1
-            print(n, i, ff, nf, f)
+            print((n, i, ff, nf, f))
         n += 1
 
 

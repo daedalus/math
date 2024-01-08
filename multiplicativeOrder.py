@@ -43,11 +43,11 @@ def CyclicGroup(g, n):
 
 
 if __name__ == "__main__":
-    print("ZnMultGroup(10)", ZnMultGroup(10))
-    print("ZnMultGroup(11)", ZnMultGroup(11))
-    print("CyclicGroup(2,11)", CyclicGroup(2, 11))
+    print(("ZnMultGroup(10)", ZnMultGroup(10)))
+    print(("ZnMultGroup(11)", ZnMultGroup(11)))
+    print(("CyclicGroup(2,11)", CyclicGroup(2, 11)))
     for i in range(2, 10):
         for j in range(i, 10):
             if gcd(i, j) == 1:
                 # print("Zn:",j,ZnMultGroup(j))
-                print("multiplicativeOrder", i, j, multiplicativeOrder(i, j))
+                print(("multiplicativeOrder", i, j, multiplicativeOrder(i, j)))

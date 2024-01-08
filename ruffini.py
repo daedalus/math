@@ -7,7 +7,7 @@ from math import *
 
 # tells if a n is prime or not
 def isPrime(n):
-    return all(n % i != 0 for i in range(2, int(n ** 0.5) + 1))
+    return all(n % i != 0 for i in range(2, int(n**0.5) + 1))
 
 
 # finds the prime factors of n
@@ -51,18 +51,18 @@ def ruffini_step(P, D):
 
 
 def ruffini_test(P):
-    print "P=", P
+    print(("P=", P))
     TI = P[len(P) - 1]
     D = [1] + factors(abs(TI)) + [abs(TI)]
     D = addnegatives(D)
     D.sort()
-    print "D=", D
+    print(("D=", D))
 
     tmp = P
     for k in range(len(P) - 3):
         ret = ruffini_step(tmp, D)
         tmp = ret[1]
-        print "Grade=", len(P) - k, "root=", ret[0], "coefs=", ret[1]
+        print(("Grade=", len(P) - k, "root=", ret[0], "coefs=", ret[1]))
 
 
 # P = [1,-7,13,23,-78]

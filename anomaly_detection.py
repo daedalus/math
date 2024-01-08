@@ -107,14 +107,14 @@ def test():
     MAD anomaly detection: [(5, 12, 3.8333333333333344)]
     """
     S = [2, 3, 5, 2, 3, 12, 5, 3, 4]
-    print("Series:", S)
-    print("Mean:", mean(S))
-    print("StdDev:", stddev(S))
-    print("Bounds:", bounds(S))
-    print("simple anomaly detection:", list(simple_anonaly_detection(S)))
-    print("zvalues:", list(zvalue(S)))
-    print("zvalue anomaly detection:", list(zvalue_anomaly_detection(S)))
-    print("MAD anomaly detection:", list(MAD_anomaly_detection(S)))
+    print(("Series:", S))
+    print(("Mean:", mean(S)))
+    print(("StdDev:", stddev(S)))
+    print(("Bounds:", bounds(S)))
+    print(("simple anomaly detection:", list(simple_anonaly_detection(S))))
+    print(("zvalues:", list(zvalue(S))))
+    print(("zvalue anomaly detection:", list(zvalue_anomaly_detection(S))))
+    print(("MAD anomaly detection:", list(MAD_anomaly_detection(S))))
 
 
 if __name__ == "__main__":

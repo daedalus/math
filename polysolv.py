@@ -72,29 +72,29 @@ def poly_to_text(poly, grade=0):
 
 
 def poly_synthetic_div_complete_step(poly, grade):
-    print "-" * 60
-    print "Grade:", grade
-    print "P = ", poly_to_text(poly, grade)
-    print "Coefs: P =", poly
+    print(("-" * 60))
+    print(("Grade:", grade))
+    print(("P = ", poly_to_text(poly, grade)))
+    print(("Coefs: P =", poly))
     rationals = get_rationals(poly, grade)
-    print "rationals:", rationals
+    print(("rationals:", rationals))
     term = []
     if len(rationals) > 0:
         for Q in rationals:
             R = poly_synthetic_div(poly, Q)
             if R[-1] == 0:
-                print "Q =", Q
-                print ("%d is divisor" % Q)
-                print "Coefs: R =", R
-                print "R = ", poly_to_text(R, grade - 1)
+                print(("Q =", Q))
+                print(("%d is divisor" % Q))
+                print(("Coefs: R =", R))
+                print(("R = ", poly_to_text(R, grade - 1)))
             if R[-1] == 0:
                 term = ["(x + %d)" % -Q]
                 # break
                 return R[:-1], term
-        print "No divisor found"
+        print("No divisor found")
         return None
     else:
-        print "No rationals"
+        print("No rationals")
     return None
 
 
@@ -109,9 +109,9 @@ def factor_poly(Poly, Grade):
         else:
             break
     terms += ["(%s)" % poly_to_text(P, grade)]
-    print "=" * 60
+    print(("=" * 60))
     s = sanitize("".join(terms))
-    print "Result:", s
+    print(("Result:", s))
 
 
 P = [1, 1, -11, -5, 30]

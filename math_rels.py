@@ -27,7 +27,7 @@ a = 2
 t = -min(-a, a)
 x = max(-a, a)
 y = abs(a)
-z = math.sqrt(a ** 2)
+z = math.sqrt(a**2)
 w = a * sgn(a)
 
-print t == x == y == z == w
+print((t == x == y == z == w))

@@ -20,4 +20,4 @@ def GM(data):
 # harmonic mean
 def HM(data):
     accum = sum(1 / data[i] for i in range(0, len(data) - 1))
-    return len(data) * (accum ** -1)
+    return len(data) * (accum**-1)

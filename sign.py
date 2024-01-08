@@ -17,6 +17,6 @@ def almostEqual(a, b, epsilon):
     return _abs(a - b) <= epsilon
 
 
-print sign(1)
-print sign(0)
-print sign(-1)
+print((sign(1)))
+print((sign(0)))
+print((sign(-1)))

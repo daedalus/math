@@ -16,14 +16,15 @@ def sqrt(x):
 
 
 def sqrt(n):
-  x = n
-  y = 1
-  e = 0.00000001
-  while (x - y) > e:
-    x = (x + y) / 2
-    y = n / x
-  return x
-  
+    x = n
+    y = 1
+    e = 0.00000001
+    while (x - y) > e:
+        x = (x + y) / 2
+        y = n / x
+    return x
+
+
 # given the x**2-2=0 condition we bruteforce an aproximation to sqrt(2)
 
 
@@ -38,17 +39,22 @@ def sqrttest():
     last_aprox = None
     while error != 0:
         i = i + 1
-        error = (x ** target) - target
+        error = (x**target) - target
         x = x - (error * step)
 
         if error < lower_error:
             lower_error = abs(error)
 
-        print "Count: %d, Aprox: %s, Error: %s, LowerError: %s" % (
-            i,
-            x,
-            error,
-            lower_error,
+        print(
+            (
+                "Count: %d, Aprox: %s, Error: %s, LowerError: %s"
+                % (
+                    i,
+                    x,
+                    error,
+                    lower_error,
+                )
+            )
         )
 
 

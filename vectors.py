@@ -60,22 +60,22 @@ def magnitude(vec):
 
 def tests():
     vec = [0, 4, -3]
-    print length(vec)
-    print normalize(vec)
+    print((length(vec)))
+    print((normalize(vec)))
 
     s = 3
     k = [1, 2]
     j = [2, 3]
 
     tmp = multiply(k, j)
-    print tmp
-    print multiplyScalar(tmp, s)
+    print(tmp)
+    print((multiplyScalar(tmp, s)))
 
     k = [0, 1, 0]
     j = [1, 0, 0]
 
-    print dot(k, j)
-    print cross(k, j)
+    print((dot(k, j)))
+    print((cross(k, j)))
 
-    print magnitude(j)
-    print magnitude(k)
+    print((magnitude(j)))
+    print((magnitude(k)))

@@ -9,6 +9,7 @@ def bits(n):
         yield n & 1
         n >>= 1
 
+
 def double_and_add(n, x):
     """
     Returns the result of n * x, computed using

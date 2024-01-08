@@ -20,7 +20,7 @@ def derivative(f):
 
 
 def g(x):
-    return x ** 2
+    return x**2
 
 
 dg = derivative(g)
@@ -42,10 +42,10 @@ def integral(f):
     return intf
 
 
-print "g(x)=", [g(x) for x in range(11)]
+print(("g(x)=", [g(x) for x in range(11)]))
 
-print "df g(x)=", [dg(x) for x in range(11)]
+print(("df g(x)=", [dg(x) for x in range(11)]))
 
 inv1 = integral(derivative(g))
 
-print "integral(df g(x))=", [inv1(x) for x in range(11)]
+print(("integral(df g(x))=", [inv1(x) for x in range(11)]))

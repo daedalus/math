@@ -7,10 +7,11 @@ def pisano_period(m):
     """
     A001175
     """
-    if m == 1: return 1
+    if m == 1:
+        return 1
     a = b = 1
     n = i = 0
-    while i <= (m ** 2):
+    while i <= (m**2):
         b, a = a, (a + b) % m
         if a == 1 and b == 0:
             return n + 2
@@ -19,4 +20,4 @@ def pisano_period(m):
 
 if __name__ == "__main__":
     for i in range(1, 100):
-        print(pisano_period(i))
+        print((pisano_period(i)))

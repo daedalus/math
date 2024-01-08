@@ -9,9 +9,9 @@ def SeqMult(s):
         if l % 2 != 0:
             s += [1]
             l += 1
-        s = list(map(mul, s[:l // 2], s[l // 2 :]))
+        s = list(map(mul, s[: l // 2], s[l // 2 :]))
         l = len(s)
     return s[0]
 
 
-print(SeqMult([1, 2, 3, 4, 5]) == (1 * 2 * 3 * 4 * 5))
+print((SeqMult([1, 2, 3, 4, 5]) == (1 * 2 * 3 * 4 * 5)))
