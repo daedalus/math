@@ -103,12 +103,11 @@ def factor_poly(Poly, Grade):
     terms = []
     for grade in range(Grade, 1, -1):
         result = poly_synthetic_div_complete_step(P, grade)
-        if result != None:
-            P, term = result
-            terms += term
-        else:
+        if result is None:
             break
-    terms += ["(%s)" % poly_to_text(P, grade)]
+        P, term = result
+        terms += term
+    terms += [f"({poly_to_text(P, grade)})"]
     print(("=" * 60))
     s = sanitize("".join(terms))
     print(("Result:", s))
