@@ -15,8 +15,7 @@ class BarretReduccer:
     def reduce(self, a):
         # if 0 <= a <= self.m**2: raise ValueError("a must be >0 and < n^2")
         a -= ((a * self.q) >> self.shift) * self.m
-        if a >= self.m:
-            a -= self.m
+        a -= self.m * (a >= self.m)
         return a
 
 
