@@ -6,7 +6,7 @@ def SeqMult(s):
     mul = lambda a, b: a * b
     l = len(s)
     while l > 1:
-        if l % 2 != 0:
+        if l & 1 == 1:
             s += [1]
             l += 1
         s = list(map(mul, s[: l // 2], s[l // 2 :]))
