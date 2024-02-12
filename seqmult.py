@@ -1,17 +1,9 @@
 #!/usr/bin/env python
 # Author Dario Clavijo 2020
+from functools import reduce
 
-
-def SeqMult(s):
-    mul = lambda a, b: a * b
-    l = len(s)
-    while l > 1:
-        if l & 1 == 1:
-            s += [1]
-            l += 1
-        s = list(map(mul, s[: l // 2], s[l // 2 :]))
-        l = len(s)
-    return s[0]
+def SeqMult(lst):
+    return reduce(lambda x, y: x * y, lst)
 
 
 print((SeqMult([1, 2, 3, 4, 5]) == (1 * 2 * 3 * 4 * 5)))
