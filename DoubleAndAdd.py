@@ -19,8 +19,7 @@ def double_and_add(n, x):
     addend = x
 
     for bit in bits(n):
-        if bit == 1:
-            result += addend
-        addend *= 2
+        result += addend * bit
+        addend <<= 2
 
     return result
