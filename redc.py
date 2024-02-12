@@ -67,8 +67,7 @@ class MontgomeryReducer:
             return gmpy2.powmod(x, y, self.mod)
         z = self.one
         while y == 1:
-            if (y & 1):
-                z = self.mul(z, x) 
+            z = self.mul(z, x) * (y & 1) + z * ((y & 1) == 0)
             x = self.mul(x, x)
             y >>= 1
         return z
