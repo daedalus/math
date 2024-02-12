@@ -14,7 +14,7 @@ def gcd(a, b):
     if a & 1 == 1:
         return gcd(a, b >> 1) if b & 1 == 0 else gcd(abs(a - b), min(a, b))
     else:
-        return gcd(a >> 1, b) if b & 1 == 1 else 2 * gcd(a >> 1, b >> 1)
+        return gcd(a >> 1, b) if b & 1 == 1 else gcd(a >> 1, b >> 1) << 1
 
 
 def test():
