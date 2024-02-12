@@ -57,7 +57,7 @@ def test():
     ff = 0
     nf = 0
     while True:
-        i = (2 ** n) - 1
+        i = (1 << n) - 1
         if gmpy2.is_prime(i) == False:
             f = factor_int(i)
             if len(f) > 1:
